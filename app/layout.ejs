@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%- title %></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/style/all.css">
+  </head>
+
+  <body>
+    <div class="nav-bar">
+      <div class="container d-flex justify-content-md-between justify-content-center">
+        <a href="" class="ham">
+          <img src="./assets/images/ic_menu_24px.svg" alt="" class="menu-pic">
+        </a>
+        <img src="./assets/images/logo.png" alt="" class="logo img-size-auto">
+
+        <ul class="nav">
+          <li class="nav-item">
+            <a href="">系列鏡框</a>
+          </li>
+          <li class="nav-item">
+            <a href="">門市據點</a>
+          </li>
+          <li class="nav-item">
+            <a href="">部落格</a>
+          </li>
+          <li class="nav-item">
+            <a href="FAQ.html">常見問題</a>
+          </li>
+        </ul>
+
+        <div class="dropdowns">
+          <ul class="dropdown-list">
+            <li class="dropdown-item">系列鏡框</li>
+            <li class="dropdown-item">門市據點</li>
+            <li class="dropdown-item">部落格</li>
+            <li class="dropdown-item">常見問題</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+      
+
+    <%- contents %>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="link-infos-list justify-content-md-between justify-content-end">
+          <ul class="link-infos">
+            <li>首頁</li>
+            <li>系列鏡框</li>
+            <li>門市據點</li>
+            <li>部落格</li>
+            <li>常見問題</li>
+          </ul>
+          <ul class="sociallink-infos">
+            <li>
+              <img src="./assets/images/icon-fb.svg" alt="" class="img-size-auto">
+            </li>
+            <li>
+              <img src="./assets/images/icon-ig.svg" alt="" class="img-size-auto">
+            </li>
+            <li>
+              <img src="./assets/images/icon-line.svg" alt="" class="img-size-auto">
+            </li>
+          </ul>
+        </div>
+        <ul class="contact-infos d-flex flex-column">
+          <li>
+            <img src="./assets/images/icon-phone.svg" alt="">
+            0800-000-000
+          </li>
+          <li>
+            <img src="./assets/images/icon-mail.svg" alt="">
+            glasses@business.com
+          </li>
+        </ul>
+        <hr>
+        <ul class="copyright-infos d-flex justify-content-between">
+          <li class="copy-left">
+            Copyright © 2020 Glasses.All rights reserved.
+          </li>
+          <div class="copy-right">
+            <div>隱私權政策</div>
+            <div class="mr-0">服務條款</div>
+          </div>
+          <div class="logo-414">
+            <img src="./assets/images/logo.png" alt="" class="img-size-auto">
+          </div>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous">
+    </script>
+    
+    <script>
+      $('.ham').click(function (e) {
+        e.preventDefault();
+        $('.dropdowns').toggleClass('active')
+      })
+    </script>
+  </body>
+
+</html>

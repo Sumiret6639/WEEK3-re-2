@@ -1,0 +1,79 @@
+.bg-white{
+    background-color: #fff;
+    margin-top: -32px;
+}
+
+.p-16{
+    padding: padding(1);
+}
+
+.px-0{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.py-64{
+    padding: padding(4) 0;
+
+    @include pad{
+        padding: padding(2.5) 0;;
+    }
+
+    @include phone{
+        padding: padding(1.5) 0;;
+    }
+}
+
+.buttom-mb{
+    margin-bottom: 92px;
+
+    @include pad{
+        margin-bottom: 56px;
+    }
+
+    @include phone{
+        margin-bottom: 48px;
+    }
+}
+
+.ml-24{
+    margin-left: 24px;
+}
+
+.flex-column-jcc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flex-column-aic{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-center-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-size-auto{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.item-reverse{
+    flex-direction: row-reverse;
+}
+
+
+
+.dn{
+    display: none;
+}
+
+.db{
+    display: block;
+}

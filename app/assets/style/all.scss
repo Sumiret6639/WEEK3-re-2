@@ -1,0 +1,23 @@
+
+@import "./helpers/utilities/customVariables";
+@import"./helpers/utilities/mixin";
+@import"./helpers/utilities/utilities";
+@import "functions";
+@import "./helpers/variables";
+@import "bootstrap";
+
+//layout
+
+@import "./helpers/layouts/layouts";
+
+//pages
+
+@import"./helpers/pages/index";
+@import"./helpers/pages/FAQ";
+
+//utilities
+@import"./helpers/utilities/base";
+
+
+
+

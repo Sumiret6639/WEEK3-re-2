@@ -1,0 +1,493 @@
+
+//banner
+
+.banner{
+    background-image: url("../images/banner.png");
+    background-size: cover;
+    height: 840px;
+    text-align: right;
+    color: $red-dark;
+
+    h3{
+        @include font(2.25)
+    }
+
+    h1{
+        @include font(4)
+    }
+
+    @include pad {
+        padding: 0px padding(3) 0px 0px;
+        background-position: center center;
+
+        h3{
+            @include font(1.25)
+        }
+
+        h1{
+            @include font(3)
+        }
+    }
+
+    @include phone{
+        height: 394px;
+        background-image: url("../images/68.png");
+        padding: 0px 12px 0px 0px;
+
+        h3{
+            @include font(1);
+        }
+
+        h1{
+            font-size: 32px;
+            line-height: 72px;
+        }
+    }
+}
+
+//brand-infos
+
+.brand-infos{
+    background-color: $pink-light;
+    padding: padding(4) 0;
+
+    @include pad{
+        padding: padding(2.5) padding(3);
+    }
+
+    @include phone{
+        padding: 32px 12px;
+
+        h2{
+            margin-bottom: 0;
+        }
+    }
+}
+
+.infos-list{
+    h3{
+        @include font(1.5);
+        color: $red-dark;
+    }
+
+    img{
+        height: 80px;
+        margin-bottom: margin(2.5);
+    }
+} 
+
+.list-item{
+    img{
+        margin-bottom: 16px;
+    }
+
+    @include pad{
+        padding: 0 padding(3);
+        margin-bottom: margin(2.5);
+    }
+
+    @include phone{
+        padding: 0 padding(4);
+    }
+}
+
+//classic
+
+.classics-list-item{
+    margin-bottom: margin(2);
+    display: flex;
+    align-items: center;
+
+    h2{
+        @include h2-title-base(3,$red,0);
+    }
+
+    @include pad{
+        h2{
+            @include font(1.75);
+        }
+    }
+
+    @include phone{
+        h2{
+            @include h2-title-base(1.75,white,0);
+        }
+    }
+}
+
+.classics-optical{
+    justify-content: flex-start;
+
+    @include phone{
+        justify-content: center;
+        background-image: url("../images/product-1.png");
+    }
+}
+
+.classics-sunglasses{
+    flex-direction: row-reverse;
+
+    @include pad{
+        flex-direction: row;
+    }
+
+    @include phone{
+        justify-content: center;
+        background-image: url("../images/product-2.png")
+    }
+}
+
+.classics-functional{
+    justify-content: flex-start;
+
+    @include phone{
+        justify-content: center;
+        background-image: url("../images/product-3.png");
+    }
+}
+
+.optical-img{
+    background-image: url("../images/product-1.png");
+    margin-right: 24px;
+}
+
+.sunglasses-img{
+    background-image: url("../images/product-2.png");
+    margin-left: 24px;
+    @include pad{
+        margin-left: 0;
+        margin-right: 24px;
+    }
+}
+
+.functional-img{
+    background-image: url("../images/product-3.png");
+    margin-right: 24px;
+}
+
+.classics-img{
+    width: 792px;
+    height: 320px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include pad{
+        max-width: 411px;
+        max-height: 168px;
+    }
+
+    @include phone{
+        display: none;
+    }
+}
+
+.classics-mobile{
+    @include phone{
+        height: 134px;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+}
+
+.icon-diamond{
+    background-image: url("../images/icon-diamond.svg");
+
+    @include phone{
+        background-image: url("../images/iconfinder_44_2529968.svg");
+    }
+}
+
+.icon-sun{
+    background-image: url("../images/icon-sun.svg");
+    @include phone{
+        background-image: url("../images/icon-sun-white.svg");
+    }
+}
+
+.icon-thunder{
+    background-image: url("../images/icon-thunder.svg");
+    @include phone{
+        background-image: url("../images/icon-thunder-white.svg");
+    }
+}
+
+.classics-icon{
+    width: 48px;
+    height: 48px;
+    margin-right: 8px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+//cobrandings
+
+.co-brandings{
+    background-image: url("../images/bg.png");
+    background-size: cover;
+    padding: 64px 0 479px 0;
+
+    h2{
+        color: #fff;
+    }
+
+    @include pad{
+        padding: 40px 0px 417px 0px;
+    }
+
+    @include phone{
+        padding: 24px 0px 189px 0px;
+    }
+}
+
+.img-list1{
+    margin-bottom: margin(5);
+
+    @include phone{
+        margin-bottom: margin(1.25);
+    }
+}
+
+.img-list2{
+    margin-top: margin(0.5);
+}
+
+.left{
+    margin-right: margin(0.5);
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.link-direction{
+    @include box-size(100%);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: margin(0.5);
+}
+
+.next{
+    @include box-size(50%,80%);
+    padding: 5px;
+    @include font(4);
+    font-weight: bold;
+    color: $red;
+    background-color: #fff;
+
+    @include pad{
+        @include h2-title-base(2.5,$red,0); 
+    }
+
+    @include phone{
+        font-size: 20px;
+        line-height: 1.3;
+    }
+}
+
+.yellow{
+    @include box-size(40%,95%);
+    margin-right: -30%;
+    background-image: url("../images/more.png");
+}
+
+.img-item3, .img-item4{
+    flex: 1;
+    background-size: cover;
+    justify-content: center;
+    height: 539px;
+
+    h1{
+        @include font(4.5);
+        color: $red;
+        margin-bottom: 0;
+
+        @include pad{
+            @include font(2);
+        }
+
+        @include phone{
+            @include font(2);
+        }
+    }
+
+    @include pad{
+        height: 280px;
+        background-position: center;
+        background-size: cover;
+    }
+
+    @include phone{
+        flex: unset;
+        height: 284px;
+    }
+}
+
+.img-item3{
+    background: linear-gradient(to bottom,rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url("../images/product-8.png");
+    margin-right: margin(1.875);
+
+    @include phone{
+        margin-bottom: 32px;
+        margin-right: 0;
+    }
+}
+
+.img-item4{
+    background: linear-gradient(to bottom,rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url("../images/product-9.png");
+}
+
+//recommend
+
+.recommendation{
+    margin: margin(-16.75) 0 margin(5) 0;
+
+    h2{
+        color: #fff;
+    }
+
+    @include pad{
+        margin-top: margin(-24);
+    }
+
+    @include phone{
+        margin-top: -160px;
+
+        h2{
+            margin-bottom: 16px;
+        }
+
+        .row{
+            justify-content: center;
+        }
+    }
+
+}
+
+.recommend-list-item{
+    display: flex;
+    flex-direction: column;
+
+    img{
+        margin-bottom: margin(1);
+    }
+
+    h5, p{
+        @include font(1);
+        margin-bottom: margin(1);
+    }
+
+    .lighter{
+        @include font(1);
+        color: $gray;
+    }
+
+    @include phone{
+        margin: 12px 0px;
+    }
+}
+
+//contact
+
+.contact{
+    padding: padding(4) 0 0 0;
+    background-color: $pink-light;
+
+    h2{
+        @include h2-title-base(3,black,1.5)
+    }
+
+    p{
+        @include font(1.25);
+        margin-bottom: margin(1.25);
+
+        @include phone{
+            @include font(1);
+            margin-bottom: margin(1.25);
+        }
+    }
+
+    @include pad{
+        padding: padding(2.5) 0px 0px 0px;
+    }
+
+    @include phone{
+        padding: 0;
+
+        h2{
+            font-size: 20px;
+            line-height: 28px;
+            margin-top: 24px;
+            margin-bottom: 8px;
+        }
+    }
+}
+
+.contact-form{
+    @include font(1.5);
+
+    input[type=text], input[type=textarea]{
+        width: 100%;
+        height: 50px;
+        border: 1px solid #000;
+        background-color: $pink-light;
+        margin-bottom: margin(1);
+        padding: padding(1);
+    }
+
+    button{
+        border: 0;
+        background-color: $red;
+        color: #fff;
+        padding:  padding(1) padding(3);
+
+        &:hover{
+            background-color: #650300;
+        }
+
+        @include phone{
+            button{
+                padding: 7px 36px;
+                margin-bottom: 56px;
+            }
+        }
+    }
+
+    @include phone{
+        @include font(1);
+    }
+}
+
+.checkbox{
+    margin-bottom: 42px;
+    display: flex;
+
+    input[type=checkbox]{
+        appearance: none;
+        border: 1px solid #000;
+        width: 24px;
+        height: 24px;
+        margin:  margin(0.5) margin(0.5) 0 0;
+    }
+
+    label{
+        @include phone{
+            width: 95%;
+        }
+    }
+    @include pad{
+        margin-bottom: 24px;
+    }
+
+    @include phone{
+        margin-bottom: 20px;
+        justify-content: space-between;
+        input[type=checkbox]{
+            @include box-size(17px);
+        }
+    }
+}
