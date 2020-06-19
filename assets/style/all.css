@@ -11005,6 +11005,11 @@ a.text-dark:hover, a.text-dark:focus {
   color: #fff;
 }
 
+.dropdown-item a {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
 .active {
   max-height: 240px;
 }
@@ -11836,7 +11841,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .FAQ-banner {
   height: 304px;
-  background-image: url("/images/week4/72@2x.png");
+  background-image: url("../images/week4/72@2x.png");
   background-size: cover;
   background-position: center;
   display: -webkit-box;
@@ -11851,10 +11856,38 @@ a.text-dark:hover, a.text-dark:focus {
           justify-content: flex-end;
 }
 
+@media (min-width: 768px) and (max-width: 995px) {
+  .FAQ-banner {
+    background-position: 30% center;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 414px) {
+  .FAQ-banner {
+    height: 143px;
+    background-position: 30% center;
+    background-size: cover;
+  }
+}
+
 .FAQ-banner h1 {
   font-size: 64px;
   line-height: 80px;
-  padding: 0 0 0 360px;
+}
+
+@media (min-width: 768px) and (max-width: 995px) {
+  .FAQ-banner h1 {
+    font-size: 48px;
+    line-height: 80px;
+  }
+}
+
+@media (max-width: 414px) {
+  .FAQ-banner h1 {
+    font-size: 28px;
+    line-height: 40px;
+  }
 }
 
 .FAQ-banner .quesition-icon {
@@ -11862,13 +11895,11 @@ a.text-dark:hover, a.text-dark:focus {
   height: 58px;
 }
 
-.FAQ-contain {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+@media (max-width: 414px) {
+  .FAQ-banner .quesition-icon {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .FAQ-contain h2 {
@@ -11879,9 +11910,30 @@ a.text-dark:hover, a.text-dark:focus {
   margin-bottom: 16px;
 }
 
+@media (max-width: 414px) {
+  .FAQ-contain h2 {
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+}
+
 .question-lists {
-  width: 62.5%;
+  width: 100%;
   margin-bottom: 156px;
+}
+
+@media (min-width: 768px) and (max-width: 995px) {
+  .question-lists {
+    margin-bottom: 104px;
+  }
+}
+
+@media (max-width: 414px) {
+  .question-lists {
+    margin-bottom: 56px;
+  }
 }
 
 .question-list-item {
@@ -11889,27 +11941,57 @@ a.text-dark:hover, a.text-dark:focus {
   border: 1px solid #000;
 }
 
+.question-list-item label {
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
 .question-list-item .quesition-title {
   font-size: 20px;
-  line-height: 72px;
   padding: 22px 38px;
   font-weight: 500;
 }
 
+@media (min-width: 768px) and (max-width: 995px) {
+  .question-list-item .quesition-title {
+    padding: 16px 24px;
+  }
+}
+
+@media (max-width: 414px) {
+  .question-list-item .quesition-title {
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 16px;
+  }
+}
+
 .question-list-item input[type=checkbox] {
-  appearance: none;
-  -moz-appearance: none;
   -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   outline: none;
   width: 39px;
   height: 24px;
   background-size: cover;
   background-position: center center;
-  background-image: url("/images/week4/ic_keyboard_arrow_down_24px.svg");
+  background-image: url("../images/week4/ic_keyboard_arrow_down_24px.svg");
   position: absolute;
   right: 16px;
   top: 24px;
   cursor: pointer;
+}
+
+@media (min-width: 768px) and (max-width: 995px) {
+  .question-list-item input[type=checkbox] {
+    top: 20px;
+  }
+}
+
+@media (max-width: 414px) {
+  .question-list-item input[type=checkbox] {
+    top: 16px;
+  }
 }
 
 .question-list-item .slide-content {
@@ -11932,79 +12014,9 @@ a.text-dark:hover, a.text-dark:focus {
   padding: 22px 38px;
 }
 
-@media (max-width: 768px) {
-  .FAQ-banner {
-    background-position: 30% center;
-    background-size: cover;
-  }
-  .FAQ-banner h1 {
-    font-size: 48px;
-    line-height: 80px;
-    padding: 0 0 0 48px;
-  }
-  .FAQ-contain {
-    padding: 48px;
-    margin: 0;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-  .FAQ-contain h2 {
-    margin-top: 0;
-  }
-  .question-lists {
-    width: 100%;
-    margin-bottom: 104px;
-  }
-  .question-list-item .quesition-title {
-    line-height: 54px;
-    padding: 16px 24px;
-  }
-  .question-list-item input[type=checkbox] {
-    right: 24px;
-    top: 15px;
-  }
+@media (min-width: 768px) and (max-width: 995px) {
   .question-list-item input[type=checkbox]:checked + .slide-content {
-    padding: 16px 24px;
-  }
-}
-
-@media (max-width: 375px) {
-  .FAQ-banner {
-    height: 143px;
-    background-position: 30% center;
-    background-size: cover;
-  }
-  .FAQ-banner h1 {
-    font-size: 28px;
-    line-height: 40px;
-    padding: 0 12px;
-  }
-  .FAQ-banner .quesition-icon {
-    width: 24px;
-    height: 24px;
-  }
-  .FAQ-contain {
-    padding: 0 12px;
-  }
-  .FAQ-contain h2 {
-    font-size: 20px;
-    line-height: 28px;
-    margin-top: 24px;
-    margin-bottom: 16px;
-  }
-  .question-lists {
-    width: 100%;
-    margin-bottom: 56px;
-  }
-  .question-list-item .quesition-title {
-    font-size: 16px;
-    line-height: 54px;
-    padding: 16px;
-  }
-  .question-list-item input[type=checkbox] {
-    right: 8px;
-    top: 15px;
+    padding: 16px 16px;
   }
 }
 
